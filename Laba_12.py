@@ -7,7 +7,7 @@ import numpy as np
 from decimal import Decimal, getcontext
 
 
-def s_sum(current_x, first_x, t):
+def sum(current_x, first_x, t):
     n = 1
     det = np.linalg.det(current_x)
     factorial = 1
@@ -55,6 +55,6 @@ print(first_x)
 print('__________________________')
 
 getcontext().prec = t
-result = s_sum(current_x, first_x, t)
+result = sum(current_x, first_x, t)
 
 print(f"Сумма ряда |х^n|/n! с точностью {t} знаков после запятой: {result:.{t}f}".rstrip('0').rstrip('.'))
