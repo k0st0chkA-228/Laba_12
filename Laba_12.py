@@ -9,11 +9,11 @@ from decimal import Decimal, getcontext
 
 def sum(current_x, first_x, t):
     n = 1
-    det = np.linalg.det(current_x)
     factorial = 1
     res = 0
 
     while True:
+        det = np.linalg.det(current_x)
         curr_term = Decimal(det / factorial)
 
         if abs(curr_term) < 1 / (10 ** t):
